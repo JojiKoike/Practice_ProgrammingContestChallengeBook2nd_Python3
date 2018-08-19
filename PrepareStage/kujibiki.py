@@ -2,7 +2,7 @@ n = int(input())                        # Number of cards
 m = int(input())                        # Sum
 k = [int(input()) for i in range(n)]    # Cards
 
-# Judgement
+# Judgement O(n) = n^4
 judge_result = False
 for a in range(n):
     for b in range(n):

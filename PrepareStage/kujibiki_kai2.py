@@ -7,7 +7,7 @@ kk = [k[i] + k[j] for i in range(n) for j in range(n)]
 kk_sorted = sorted(kk)
 
 
-# Search
+# Search O(n) = log(n)
 def binary_search(x):
     left, right = 0, n*n
     while right - left >= 1:
@@ -21,7 +21,7 @@ def binary_search(x):
     return False
 
 
-# Judge
+# Judge O(n) = n^2
 judge_result = False
 for a in range(n):
     for b in range(n):

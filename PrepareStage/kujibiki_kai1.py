@@ -4,7 +4,7 @@ k = [int(input()) for i in range(n)]
 k_sorted = sorted(k)
 
 
-# Search
+# Search O(n) = log(n)
 def binary_search(x):
     left, right = 0, n
     while right - left >= 1:
@@ -18,7 +18,7 @@ def binary_search(x):
     return False
 
 
-# Judge
+# Judge O(n) = n^3
 judge_result = False
 for a in range(n):
     for b in range(n):
