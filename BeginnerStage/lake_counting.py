@@ -11,7 +11,7 @@ print(field)
 
 
 # Depth First Search
-def dfs(x, y):
+def dfs(x: int, y: int):
     field[x][y] = '.'
 
     for dx in range(-1, 2):
