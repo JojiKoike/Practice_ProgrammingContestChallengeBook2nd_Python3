@@ -1,23 +1,22 @@
 # Get Number of items and Limit Weight
-n, W = map(int, input().split())
+N, W = map(int, input().split())
 
 # Get Items info and build value and weight list
-items = [map(int, input().split()) for i in range(n)]
+items = [map(int, input().split()) for i in range(N)]
 values = []
 weights = []
 for item in items:
-    v, w = item
-    values.append(v)
+    w, v = item
     weights.append(w)
+    values.append(v)
 
-print(values)
-print(weights)
 
 # Initialize Dynamic Table
-dp = [[0 for j in range(W + 1)] for i in range(n + 1)]
+dp = [[0 for j in range(W + 1)] for i in range(N + 1)]
+
 
 # Solve
-for i in range(n - 1, -1, -1):
+for i in range(N - 1, -1, -1):
     for j in range(W + 1):
         if j < weights[i]:
             dp[i][j] = dp[i + 1][j]
